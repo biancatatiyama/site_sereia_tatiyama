@@ -1356,42 +1356,50 @@
   </footer>
   <!-- Eventos -->
   <script>
+    // 1
     window.onscroll = () => {
       if (window.innerHeight + window.scrollY >= document.body.scrollHeight) {
         console.log("Rolou até o final");
         return
       }
     };
-    //
+    // 2
     document.querySelector(".page-scroll.btn.btn-xl").addEventListener("click", () => {
       console.log("Clicou em FAÇA UM ORÇAMENTO");
     });
-    //
-    let observer = new MutationObserver((e) => {
+    // 3
+    var phoneObserver = new MutationObserver((e) => {
       console.log("Visualizou FALE COM UM ATENDENTE");
     });
-    observer.observe(document.getElementById("call-me-baby"), {
+    phoneObserver.observe(document.getElementById("call-me-baby"), {
       attributes: true,
     });
-    //
-    
-    //
+    // 4
+    Array.from(document.getElementById('contactForm').querySelectorAll('.form-control')).forEach((element) => {
+      element.addEventListener('change', (e) => {
+        if (element.id === 'email' && element.getAttribute('aria-invalid') === 'false') {
+          console.log('Preencheu o campo email')
+          return
+        }
+        if (element.id !== 'email' && e.target.value !== '') console.log(`Preencheu campo ${element.id}`)
+      })
+    })
+    // 5
+
+    // 6
     document.querySelectorAll('.page-scroll').forEach((element) => {
       element.addEventListener('click', () => {
-        if (element.className === 'page-scroll') {
+        if (element.className === 'page-scroll' || element.className === 'navbar-brand page-scroll') {
           console.log(`Clicou no menu ${element.innerHTML}`)
           return
         }
       })
     })
-    //
-    let IntersObserver = new IntersectionObserver((e) => {
-      if (e[0].isIntersecting === true) {
-        console.log('Vizualizou o banheiro')
-        return
-      }
+    // 7
+    var bathObserver = new IntersectionObserver((e) => {
+      if (e[0].isIntersecting === true) console.log('Vizualizou o banheiro')
     })
-    IntersObserver.observe(document.querySelector('.img-circle.img-responsive'))
+    bathObserver.observe(document.querySelector('.img-circle.img-responsive'))
 
   </script>
   <!-- jQuery -->
