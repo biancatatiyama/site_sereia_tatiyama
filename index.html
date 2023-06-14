@@ -1,336 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
 
-    <title>Sereia Software</title>
-    <!-- Bootstrap Core CSS -->
-    <link href="assets/bootstrap.min.css" rel="stylesheet" />
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
 
-    <!-- Custom Fonts -->
-    <link
-      href="assets/font-awesome.min.css?display=swap"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic&display=swap"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700&display=swap"
-      rel="stylesheet"
-      type="text/css"
-    />
+  <title>Sereia Software</title>
+  <!-- Bootstrap Core CSS -->
+  <link href="assets/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- Theme CSS -->
-    <style>
-      body {
-        overflow-x: hidden;
-        font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial,
-          sans-serif;
-      }
+  <!-- Custom Fonts -->
+  <link href="assets/font-awesome.min.css?display=swap" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet"
+    type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic&display=swap"
+    rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700&display=swap" rel="stylesheet"
+    type="text/css" />
 
-      .text-muted {
-        color: #777777;
-      }
+  <!-- Theme CSS -->
+  <style>
+    body {
+      overflow-x: hidden;
+      font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+    }
 
-      .text-primary {
-        color: #fed136;
-      }
+    .text-muted {
+      color: #777777;
+    }
 
-      p {
-        font-size: 14px;
-        line-height: 1.75;
-      }
+    .text-primary {
+      color: #fed136;
+    }
 
-      p.large {
-        font-size: 16px;
-      }
+    p {
+      font-size: 14px;
+      line-height: 1.75;
+    }
 
-      a,
-      a:hover,
-      a:focus,
-      a:active,
-      a.active {
-        outline: none;
-      }
+    p.large {
+      font-size: 16px;
+    }
 
-      a {
-        color: #fed136;
-      }
+    a,
+    a:hover,
+    a:focus,
+    a:active,
+    a.active {
+      outline: none;
+    }
 
-      a:hover,
-      a:focus,
-      a:active,
-      a.active {
-        color: #fec503;
-      }
+    a {
+      color: #fed136;
+    }
 
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial,
-          sans-serif;
-        text-transform: uppercase;
-        font-weight: 700;
-      }
+    a:hover,
+    a:focus,
+    a:active,
+    a.active {
+      color: #fec503;
+    }
 
-      .img-centered {
-        margin: 0 auto;
-      }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
 
-      .bg-light-gray {
-        background-color: #eeeeee;
-      }
+    .img-centered {
+      margin: 0 auto;
+    }
 
-      .bg-darkest-gray {
-        background-color: #222222;
-      }
+    .bg-light-gray {
+      background-color: #eeeeee;
+    }
 
-      .btn-primary {
-        color: white;
-        background-color: #fed136;
-        border-color: #fed136;
-        font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial,
-          sans-serif;
-        text-transform: uppercase;
-        font-weight: 700;
-      }
+    .bg-darkest-gray {
+      background-color: #222222;
+    }
 
-      .btn-primary:hover,
-      .btn-primary:focus,
-      .btn-primary:active,
-      .btn-primary.active,
-      .open .dropdown-toggle.btn-primary {
-        color: white;
-        background-color: #fec503;
-        border-color: #f6bf01;
-      }
+    .btn-primary {
+      color: white;
+      background-color: #fed136;
+      border-color: #fed136;
+      font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
 
-      .btn-primary:active,
-      .btn-primary.active,
-      .open .dropdown-toggle.btn-primary {
-        background-image: none;
-      }
+    .btn-primary:hover,
+    .btn-primary:focus,
+    .btn-primary:active,
+    .btn-primary.active,
+    .open .dropdown-toggle.btn-primary {
+      color: white;
+      background-color: #fec503;
+      border-color: #f6bf01;
+    }
 
-      .btn-primary.disabled,
-      .btn-primary[disabled],
-      fieldset[disabled] .btn-primary,
-      .btn-primary.disabled:hover,
-      .btn-primary[disabled]:hover,
-      fieldset[disabled] .btn-primary:hover,
-      .btn-primary.disabled:focus,
-      .btn-primary[disabled]:focus,
-      fieldset[disabled] .btn-primary:focus,
-      .btn-primary.disabled:active,
-      .btn-primary[disabled]:active,
-      fieldset[disabled] .btn-primary:active,
-      .btn-primary.disabled.active,
-      .btn-primary[disabled].active,
-      fieldset[disabled] .btn-primary.active {
-        background-color: #fed136;
-        border-color: #fed136;
-      }
+    .btn-primary:active,
+    .btn-primary.active,
+    .open .dropdown-toggle.btn-primary {
+      background-image: none;
+    }
 
-      .btn-primary .badge {
-        color: #fed136;
-        background-color: white;
-      }
+    .btn-primary.disabled,
+    .btn-primary[disabled],
+    fieldset[disabled] .btn-primary,
+    .btn-primary.disabled:hover,
+    .btn-primary[disabled]:hover,
+    fieldset[disabled] .btn-primary:hover,
+    .btn-primary.disabled:focus,
+    .btn-primary[disabled]:focus,
+    fieldset[disabled] .btn-primary:focus,
+    .btn-primary.disabled:active,
+    .btn-primary[disabled]:active,
+    fieldset[disabled] .btn-primary:active,
+    .btn-primary.disabled.active,
+    .btn-primary[disabled].active,
+    fieldset[disabled] .btn-primary.active {
+      background-color: #fed136;
+      border-color: #fed136;
+    }
 
-      .btn-xl {
-        color: white;
-        background-color: #fed136;
-        border-color: #fed136;
-        font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial,
-          sans-serif;
-        text-transform: uppercase;
-        font-weight: 700;
-        border-radius: 3px;
-        font-size: 18px;
-        padding: 20px 40px;
-      }
+    .btn-primary .badge {
+      color: #fed136;
+      background-color: white;
+    }
 
-      .btn-xl:hover,
-      .btn-xl:focus,
-      .btn-xl:active,
-      .btn-xl.active,
-      .open .dropdown-toggle.btn-xl {
-        color: white;
-        background-color: #fec503;
-        border-color: #f6bf01;
-      }
+    .btn-xl {
+      color: white;
+      background-color: #fed136;
+      border-color: #fed136;
+      font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+      text-transform: uppercase;
+      font-weight: 700;
+      border-radius: 3px;
+      font-size: 18px;
+      padding: 20px 40px;
+    }
 
-      .btn-xl:active,
-      .btn-xl.active,
-      .open .dropdown-toggle.btn-xl {
-        background-image: none;
-      }
+    .btn-xl:hover,
+    .btn-xl:focus,
+    .btn-xl:active,
+    .btn-xl.active,
+    .open .dropdown-toggle.btn-xl {
+      color: white;
+      background-color: #fec503;
+      border-color: #f6bf01;
+    }
 
-      .btn-xl.disabled,
-      .btn-xl[disabled],
-      fieldset[disabled] .btn-xl,
-      .btn-xl.disabled:hover,
-      .btn-xl[disabled]:hover,
-      fieldset[disabled] .btn-xl:hover,
-      .btn-xl.disabled:focus,
-      .btn-xl[disabled]:focus,
-      fieldset[disabled] .btn-xl:focus,
-      .btn-xl.disabled:active,
-      .btn-xl[disabled]:active,
-      fieldset[disabled] .btn-xl:active,
-      .btn-xl.disabled.active,
-      .btn-xl[disabled].active,
-      fieldset[disabled] .btn-xl.active {
-        background-color: #fed136;
-        border-color: #fed136;
-      }
+    .btn-xl:active,
+    .btn-xl.active,
+    .open .dropdown-toggle.btn-xl {
+      background-image: none;
+    }
 
-      .btn-xl .badge {
-        color: #fed136;
-        background-color: white;
-      }
+    .btn-xl.disabled,
+    .btn-xl[disabled],
+    fieldset[disabled] .btn-xl,
+    .btn-xl.disabled:hover,
+    .btn-xl[disabled]:hover,
+    fieldset[disabled] .btn-xl:hover,
+    .btn-xl.disabled:focus,
+    .btn-xl[disabled]:focus,
+    fieldset[disabled] .btn-xl:focus,
+    .btn-xl.disabled:active,
+    .btn-xl[disabled]:active,
+    fieldset[disabled] .btn-xl:active,
+    .btn-xl.disabled.active,
+    .btn-xl[disabled].active,
+    fieldset[disabled] .btn-xl.active {
+      background-color: #fed136;
+      border-color: #fed136;
+    }
 
+    .btn-xl .badge {
+      color: #fed136;
+      background-color: white;
+    }
+
+    .navbar-custom {
+      background-color: #222222;
+      border-color: transparent;
+    }
+
+    .navbar-custom .navbar-brand {
+      color: #fed136;
+      font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial,
+        cursive;
+    }
+
+    .navbar-custom .navbar-brand:hover,
+    .navbar-custom .navbar-brand:focus,
+    .navbar-custom .navbar-brand:active,
+    .navbar-custom .navbar-brand.active {
+      color: #fec503;
+    }
+
+    .navbar-custom .navbar-collapse {
+      border-color: rgba(255, 255, 255, 0.02);
+    }
+
+    .navbar-custom .navbar-toggle {
+      background-color: #fed136;
+      border-color: #fed136;
+      font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+      text-transform: uppercase;
+      color: white;
+      font-size: 12px;
+    }
+
+    .navbar-custom .navbar-toggle:hover,
+    .navbar-custom .navbar-toggle:focus {
+      background-color: #fed136;
+    }
+
+    .navbar-custom .nav li a {
+      font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+      text-transform: uppercase;
+      font-weight: 400;
+      letter-spacing: 1px;
+      color: white;
+    }
+
+    .navbar-custom .nav li a:hover,
+    .navbar-custom .nav li a:focus {
+      color: #fed136;
+      outline: none;
+    }
+
+    .navbar-custom .navbar-nav>.active>a {
+      border-radius: 0;
+      color: white;
+      background-color: #fed136;
+    }
+
+    .navbar-custom .navbar-nav>.active>a:hover,
+    .navbar-custom .navbar-nav>.active>a:focus {
+      color: white;
+      background-color: #fec503;
+    }
+
+    @media (min-width: 768px) {
       .navbar-custom {
-        background-color: #222222;
-        border-color: transparent;
+        background-color: transparent;
+        padding: 25px 0;
+        -webkit-transition: padding 0.3s;
+        -moz-transition: padding 0.3s;
+        transition: padding 0.3s;
+        border: none;
       }
 
       .navbar-custom .navbar-brand {
-        color: #fed136;
-        font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial,
-          cursive;
+        font-size: 2em;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
       }
 
-      .navbar-custom .navbar-brand:hover,
-      .navbar-custom .navbar-brand:focus,
-      .navbar-custom .navbar-brand:active,
-      .navbar-custom .navbar-brand.active {
-        color: #fec503;
+      .navbar-custom .navbar-nav>.active>a {
+        border-radius: 3px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .navbar-custom.affix {
+        background-color: #222222;
+        padding: 10px 0;
       }
 
-      .navbar-custom .navbar-collapse {
-        border-color: rgba(255, 255, 255, 0.02);
+      .navbar-custom.affix .navbar-brand {
+        font-size: 1.5em;
       }
+    }
 
-      .navbar-custom .navbar-toggle {
-        background-color: #fed136;
-        border-color: #fed136;
-        font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial,
-          sans-serif;
-        text-transform: uppercase;
-        color: white;
-        font-size: 12px;
-      }
+    header {
+      background-image: url("images/hero.webp");
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-position: center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+      -o-background-size: cover;
+      text-align: center;
+      color: white;
+    }
 
-      .navbar-custom .navbar-toggle:hover,
-      .navbar-custom .navbar-toggle:focus {
-        background-color: #fed136;
-      }
+    header .intro-text {
+      padding-top: 100px;
+      padding-bottom: 50px;
+    }
 
-      .navbar-custom .nav li a {
-        font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial,
-          sans-serif;
-        text-transform: uppercase;
-        font-weight: 400;
-        letter-spacing: 1px;
-        color: white;
-      }
+    header .intro-text .intro-lead-in {
+      font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+      font-style: italic;
+      font-size: 22px;
+      line-height: 22px;
+      margin-bottom: 25px;
+    }
 
-      .navbar-custom .nav li a:hover,
-      .navbar-custom .nav li a:focus {
-        color: #fed136;
-        outline: none;
-      }
+    header .intro-text .intro-heading {
+      font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 50px;
+      margin-bottom: 25px;
+    }
 
-      .navbar-custom .navbar-nav > .active > a {
-        border-radius: 0;
-        color: white;
-        background-color: #fed136;
-      }
-
-      .navbar-custom .navbar-nav > .active > a:hover,
-      .navbar-custom .navbar-nav > .active > a:focus {
-        color: white;
-        background-color: #fec503;
-      }
-
-      @media (min-width: 768px) {
-        .navbar-custom {
-          background-color: transparent;
-          padding: 25px 0;
-          -webkit-transition: padding 0.3s;
-          -moz-transition: padding 0.3s;
-          transition: padding 0.3s;
-          border: none;
-        }
-
-        .navbar-custom .navbar-brand {
-          font-size: 2em;
-          -webkit-transition: all 0.3s;
-          -moz-transition: all 0.3s;
-          transition: all 0.3s;
-        }
-
-        .navbar-custom .navbar-nav > .active > a {
-          border-radius: 3px;
-        }
-      }
-
-      @media (min-width: 768px) {
-        .navbar-custom.affix {
-          background-color: #222222;
-          padding: 10px 0;
-        }
-
-        .navbar-custom.affix .navbar-brand {
-          font-size: 1.5em;
-        }
-      }
-
-      header {
-        background-image: url("images/hero.webp");
-        background-repeat: no-repeat;
-        background-attachment: scroll;
-        background-position: center center;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-        -o-background-size: cover;
-        text-align: center;
-        color: white;
-      }
-
+    @media (min-width: 768px) {
       header .intro-text {
-        padding-top: 100px;
-        padding-bottom: 50px;
+        padding-top: 300px;
+        padding-bottom: 200px;
       }
 
       header .intro-text .intro-lead-in {
         font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial,
           sans-serif;
         font-style: italic;
-        font-size: 22px;
-        line-height: 22px;
+        font-size: 40px;
+        line-height: 40px;
         margin-bottom: 25px;
       }
 
@@ -339,634 +348,590 @@
           sans-serif;
         text-transform: uppercase;
         font-weight: 700;
-        font-size: 50px;
-        line-height: 50px;
-        margin-bottom: 25px;
+        font-size: 75px;
+        line-height: 75px;
+        margin-bottom: 50px;
       }
+    }
 
-      @media (min-width: 768px) {
-        header .intro-text {
-          padding-top: 300px;
-          padding-bottom: 200px;
-        }
+    section {
+      padding: 100px 0;
+    }
 
-        header .intro-text .intro-lead-in {
-          font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial,
-            sans-serif;
-          font-style: italic;
-          font-size: 40px;
-          line-height: 40px;
-          margin-bottom: 25px;
-        }
+    section h2.section-heading {
+      font-size: 40px;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
 
-        header .intro-text .intro-heading {
-          font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial,
-            sans-serif;
-          text-transform: uppercase;
-          font-weight: 700;
-          font-size: 75px;
-          line-height: 75px;
-          margin-bottom: 50px;
-        }
-      }
+    section h3.section-subheading {
+      font-size: 16px;
+      font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+      text-transform: none;
+      font-style: italic;
+      font-weight: 400;
+      margin-bottom: 75px;
+    }
 
+    @media (min-width: 768px) {
       section {
-        padding: 100px 0;
+        padding: 150px 0;
       }
+    }
 
-      section h2.section-heading {
-        font-size: 40px;
-        margin-top: 0;
-        margin-bottom: 15px;
-      }
+    .service-heading {
+      margin: 15px 0;
+      text-transform: none;
+    }
 
-      section h3.section-subheading {
-        font-size: 16px;
-        font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial,
-          sans-serif;
-        text-transform: none;
-        font-style: italic;
-        font-weight: 400;
-        margin-bottom: 75px;
-      }
+    #portfolio .portfolio-item {
+      margin: 0 0 15px;
+      right: 0;
+    }
 
-      @media (min-width: 768px) {
-        section {
-          padding: 150px 0;
-        }
-      }
+    #portfolio .portfolio-item .portfolio-link {
+      display: block;
+      position: relative;
+      max-width: 400px;
+      margin: 0 auto;
+    }
 
-      .service-heading {
-        margin: 15px 0;
-        text-transform: none;
-      }
+    #portfolio .portfolio-item .portfolio-link .portfolio-hover {
+      background: rgba(254, 209, 54, 0.9);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: all ease 0.5s;
+      -webkit-transition: all ease 0.5s;
+      -moz-transition: all ease 0.5s;
+    }
 
+    #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
+      opacity: 1;
+    }
+
+    #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+      position: absolute;
+      width: 100%;
+      height: 20px;
+      font-size: 20px;
+      text-align: center;
+      top: 50%;
+      margin-top: -12px;
+      color: white;
+    }
+
+    #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
+      margin-top: -12px;
+    }
+
+    #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
+    #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
+      margin: 0;
+    }
+
+    #portfolio .portfolio-item .portfolio-caption {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: white;
+      text-align: center;
+      padding: 25px;
+    }
+
+    #portfolio .portfolio-item .portfolio-caption h4 {
+      text-transform: none;
+      margin: 0;
+    }
+
+    #portfolio .portfolio-item .portfolio-caption p {
+      font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+      font-style: italic;
+      font-size: 16px;
+      margin: 0;
+    }
+
+    #portfolio * {
+      z-index: 2;
+    }
+
+    @media (min-width: 767px) {
       #portfolio .portfolio-item {
-        margin: 0 0 15px;
-        right: 0;
+        margin: 0 0 30px;
       }
+    }
 
-      #portfolio .portfolio-item .portfolio-link {
-        display: block;
-        position: relative;
-        max-width: 400px;
-        margin: 0 auto;
-      }
+    .timeline {
+      list-style: none;
+      padding: 0;
+      position: relative;
+    }
 
-      #portfolio .portfolio-item .portfolio-link .portfolio-hover {
-        background: rgba(254, 209, 54, 0.9);
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        transition: all ease 0.5s;
-        -webkit-transition: all ease 0.5s;
-        -moz-transition: all ease 0.5s;
-      }
+    .timeline:before {
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      content: "";
+      width: 2px;
+      background-color: #f1f1f1;
+      left: 40px;
+      margin-left: -1.5px;
+    }
 
-      #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
-        opacity: 1;
-      }
+    .timeline>li {
+      margin-bottom: 50px;
+      position: relative;
+      min-height: 50px;
+    }
 
-      #portfolio
-        .portfolio-item
-        .portfolio-link
-        .portfolio-hover
-        .portfolio-hover-content {
-        position: absolute;
-        width: 100%;
-        height: 20px;
-        font-size: 20px;
-        text-align: center;
-        top: 50%;
-        margin-top: -12px;
-        color: white;
-      }
+    .timeline>li:before,
+    .timeline>li:after {
+      content: " ";
+      display: table;
+    }
 
-      #portfolio
-        .portfolio-item
-        .portfolio-link
-        .portfolio-hover
-        .portfolio-hover-content
-        i {
-        margin-top: -12px;
-      }
+    .timeline>li:after {
+      clear: both;
+    }
 
-      #portfolio
-        .portfolio-item
-        .portfolio-link
-        .portfolio-hover
-        .portfolio-hover-content
-        h3,
-      #portfolio
-        .portfolio-item
-        .portfolio-link
-        .portfolio-hover
-        .portfolio-hover-content
-        h4 {
-        margin: 0;
-      }
+    .timeline>li .timeline-panel {
+      width: 100%;
+      float: right;
+      padding: 0 20px 0 100px;
+      position: relative;
+      text-align: left;
+    }
 
-      #portfolio .portfolio-item .portfolio-caption {
-        max-width: 400px;
-        margin: 0 auto;
-        background-color: white;
-        text-align: center;
-        padding: 25px;
-      }
+    .timeline>li .timeline-panel:before {
+      border-left-width: 0;
+      border-right-width: 15px;
+      left: -15px;
+      right: auto;
+    }
 
-      #portfolio .portfolio-item .portfolio-caption h4 {
-        text-transform: none;
-        margin: 0;
-      }
+    .timeline>li .timeline-panel:after {
+      border-left-width: 0;
+      border-right-width: 14px;
+      left: -14px;
+      right: auto;
+    }
 
-      #portfolio .portfolio-item .portfolio-caption p {
-        font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial,
-          sans-serif;
-        font-style: italic;
-        font-size: 16px;
-        margin: 0;
-      }
+    .timeline>li .timeline-image {
+      left: 0;
+      margin-left: 0;
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      z-index: 100;
+      background-color: #fed136;
+      color: white;
+      border-radius: 100%;
+      border: 7px solid #f1f1f1;
+      text-align: center;
+    }
 
-      #portfolio * {
-        z-index: 2;
-      }
+    .timeline>li .timeline-image h4 {
+      font-size: 10px;
+      margin-top: 12px;
+      line-height: 14px;
+    }
 
-      @media (min-width: 767px) {
-        #portfolio .portfolio-item {
-          margin: 0 0 30px;
-        }
-      }
+    .timeline>li.timeline-inverted>.timeline-panel {
+      float: right;
+      text-align: left;
+      padding: 0 20px 0 100px;
+    }
 
-      .timeline {
-        list-style: none;
-        padding: 0;
-        position: relative;
-      }
+    .timeline>li.timeline-inverted>.timeline-panel:before {
+      border-left-width: 0;
+      border-right-width: 15px;
+      left: -15px;
+      right: auto;
+    }
 
+    .timeline>li.timeline-inverted>.timeline-panel:after {
+      border-left-width: 0;
+      border-right-width: 14px;
+      left: -14px;
+      right: auto;
+    }
+
+    .timeline>li:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline .timeline-heading h4 {
+      margin-top: 0;
+      color: inherit;
+    }
+
+    .timeline .timeline-heading h4.subheading {
+      text-transform: none;
+    }
+
+    .timeline .timeline-body>p,
+    .timeline .timeline-body>ul {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: 768px) {
       .timeline:before {
-        top: 0;
-        bottom: 0;
-        position: absolute;
-        content: "";
-        width: 2px;
-        background-color: #f1f1f1;
-        left: 40px;
-        margin-left: -1.5px;
+        left: 50%;
       }
 
-      .timeline > li {
-        margin-bottom: 50px;
-        position: relative;
-        min-height: 50px;
+      .timeline>li {
+        margin-bottom: 100px;
+        min-height: 100px;
       }
 
-      .timeline > li:before,
-      .timeline > li:after {
-        content: " ";
-        display: table;
+      .timeline>li .timeline-panel {
+        width: 41%;
+        float: left;
+        padding: 0 20px 20px 30px;
+        text-align: right;
       }
 
-      .timeline > li:after {
-        clear: both;
+      .timeline>li .timeline-image {
+        width: 100px;
+        height: 100px;
+        left: 50%;
+        margin-left: -50px;
       }
 
-      .timeline > li .timeline-panel {
-        width: 100%;
-        float: right;
-        padding: 0 20px 0 100px;
-        position: relative;
-        text-align: left;
+      .timeline>li .timeline-image h4 {
+        font-size: 13px;
+        margin-top: 16px;
+        line-height: 18px;
       }
 
-      .timeline > li .timeline-panel:before {
-        border-left-width: 0;
-        border-right-width: 15px;
-        left: -15px;
-        right: auto;
-      }
-
-      .timeline > li .timeline-panel:after {
-        border-left-width: 0;
-        border-right-width: 14px;
-        left: -14px;
-        right: auto;
-      }
-
-      .timeline > li .timeline-image {
-        left: 0;
-        margin-left: 0;
-        width: 80px;
-        height: 80px;
-        position: absolute;
-        z-index: 100;
-        background-color: #fed136;
-        color: white;
-        border-radius: 100%;
-        border: 7px solid #f1f1f1;
-        text-align: center;
-      }
-
-      .timeline > li .timeline-image h4 {
-        font-size: 10px;
-        margin-top: 12px;
-        line-height: 14px;
-      }
-
-      .timeline > li.timeline-inverted > .timeline-panel {
+      .timeline>li.timeline-inverted>.timeline-panel {
         float: right;
         text-align: left;
-        padding: 0 20px 0 100px;
+        padding: 0 30px 20px 20px;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .timeline>li {
+        min-height: 150px;
       }
 
-      .timeline > li.timeline-inverted > .timeline-panel:before {
-        border-left-width: 0;
-        border-right-width: 15px;
-        left: -15px;
-        right: auto;
+      .timeline>li .timeline-panel {
+        padding: 0 20px 20px;
       }
 
-      .timeline > li.timeline-inverted > .timeline-panel:after {
-        border-left-width: 0;
-        border-right-width: 14px;
-        left: -14px;
-        right: auto;
+      .timeline>li .timeline-image {
+        width: 150px;
+        height: 150px;
+        margin-left: -75px;
       }
 
-      .timeline > li:last-child {
-        margin-bottom: 0;
+      .timeline>li .timeline-image h4 {
+        font-size: 18px;
+        margin-top: 30px;
+        line-height: 26px;
       }
 
-      .timeline .timeline-heading h4 {
-        margin-top: 0;
-        color: inherit;
+      .timeline>li.timeline-inverted>.timeline-panel {
+        padding: 0 20px 20px;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .timeline>li {
+        min-height: 170px;
       }
 
-      .timeline .timeline-heading h4.subheading {
-        text-transform: none;
+      .timeline>li .timeline-panel {
+        padding: 0 20px 20px 100px;
       }
 
-      .timeline .timeline-body > p,
-      .timeline .timeline-body > ul {
-        margin-bottom: 0;
+      .timeline>li .timeline-image {
+        width: 170px;
+        height: 170px;
+        margin-left: -85px;
       }
 
-      @media (min-width: 768px) {
-        .timeline:before {
-          left: 50%;
-        }
-
-        .timeline > li {
-          margin-bottom: 100px;
-          min-height: 100px;
-        }
-
-        .timeline > li .timeline-panel {
-          width: 41%;
-          float: left;
-          padding: 0 20px 20px 30px;
-          text-align: right;
-        }
-
-        .timeline > li .timeline-image {
-          width: 100px;
-          height: 100px;
-          left: 50%;
-          margin-left: -50px;
-        }
-
-        .timeline > li .timeline-image h4 {
-          font-size: 13px;
-          margin-top: 16px;
-          line-height: 18px;
-        }
-
-        .timeline > li.timeline-inverted > .timeline-panel {
-          float: right;
-          text-align: left;
-          padding: 0 30px 20px 20px;
-        }
+      .timeline>li .timeline-image h4 {
+        margin-top: 40px;
       }
 
-      @media (min-width: 992px) {
-        .timeline > li {
-          min-height: 150px;
-        }
-
-        .timeline > li .timeline-panel {
-          padding: 0 20px 20px;
-        }
-
-        .timeline > li .timeline-image {
-          width: 150px;
-          height: 150px;
-          margin-left: -75px;
-        }
-
-        .timeline > li .timeline-image h4 {
-          font-size: 18px;
-          margin-top: 30px;
-          line-height: 26px;
-        }
-
-        .timeline > li.timeline-inverted > .timeline-panel {
-          padding: 0 20px 20px;
-        }
+      .timeline>li.timeline-inverted>.timeline-panel {
+        padding: 0 100px 20px 20px;
       }
+    }
 
-      @media (min-width: 1200px) {
-        .timeline > li {
-          min-height: 170px;
-        }
+    .team-member {
+      text-align: center;
+      margin-bottom: 50px;
+    }
 
-        .timeline > li .timeline-panel {
-          padding: 0 20px 20px 100px;
-        }
+    .team-member img {
+      margin: 0 auto;
+      border: 7px solid white;
+    }
 
-        .timeline > li .timeline-image {
-          width: 170px;
-          height: 170px;
-          margin-left: -85px;
-        }
+    .team-member h4 {
+      margin-top: 25px;
+      margin-bottom: 0;
+      text-transform: none;
+    }
 
-        .timeline > li .timeline-image h4 {
-          margin-top: 40px;
-        }
+    .team-member p {
+      margin-top: 0;
+    }
 
-        .timeline > li.timeline-inverted > .timeline-panel {
-          padding: 0 100px 20px 20px;
-        }
-      }
+    aside.clients img {
+      margin: 50px auto;
+    }
 
-      .team-member {
-        text-align: center;
-        margin-bottom: 50px;
-      }
+    section#contact {
+      background-color: #222222;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
 
-      .team-member img {
-        margin: 0 auto;
-        border: 7px solid white;
-      }
+    section#contact .section-heading {
+      color: white;
+    }
 
-      .team-member h4 {
-        margin-top: 25px;
-        margin-bottom: 0;
-        text-transform: none;
-      }
+    section#contact .form-group {
+      margin-bottom: 25px;
+    }
 
-      .team-member p {
-        margin-top: 0;
-      }
+    section#contact .form-group input,
+    section#contact .form-group textarea {
+      padding: 20px;
+    }
 
-      aside.clients img {
-        margin: 50px auto;
-      }
+    section#contact .form-group input.form-control {
+      height: auto;
+    }
 
-      section#contact {
-        background-color: #222222;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
+    section#contact .form-group textarea.form-control {
+      height: 236px;
+    }
 
-      section#contact .section-heading {
-        color: white;
-      }
+    section#contact .form-control:focus {
+      border-color: #fed136;
+      box-shadow: none;
+    }
 
-      section#contact .form-group {
-        margin-bottom: 25px;
-      }
+    section#contact ::-webkit-input-placeholder {
+      font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #eeeeee;
+    }
 
-      section#contact .form-group input,
-      section#contact .form-group textarea {
-        padding: 20px;
-      }
+    section#contact :-moz-placeholder {
+      /* Firefox 18- */
+      font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #eeeeee;
+    }
 
-      section#contact .form-group input.form-control {
-        height: auto;
-      }
+    section#contact ::-moz-placeholder {
+      /* Firefox 19+ */
+      font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #eeeeee;
+    }
 
-      section#contact .form-group textarea.form-control {
-        height: 236px;
-      }
+    section#contact :-ms-input-placeholder {
+      font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #eeeeee;
+    }
 
-      section#contact .form-control:focus {
-        border-color: #fed136;
-        box-shadow: none;
-      }
+    section#contact .text-danger {
+      color: #e74c3c;
+    }
 
-      section#contact ::-webkit-input-placeholder {
-        font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial,
-          sans-serif;
-        text-transform: uppercase;
-        font-weight: 700;
-        color: #eeeeee;
-      }
+    footer {
+      padding: 25px 0;
+      text-align: center;
+    }
 
-      section#contact :-moz-placeholder {
-        /* Firefox 18- */
-        font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial,
-          sans-serif;
-        text-transform: uppercase;
-        font-weight: 700;
-        color: #eeeeee;
-      }
+    footer span.copyright {
+      line-height: 40px;
+      font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+      text-transform: uppercase;
+      text-transform: none;
+    }
 
-      section#contact ::-moz-placeholder {
-        /* Firefox 19+ */
-        font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial,
-          sans-serif;
-        text-transform: uppercase;
-        font-weight: 700;
-        color: #eeeeee;
-      }
+    footer ul.quicklinks {
+      margin-bottom: 0;
+      line-height: 40px;
+      font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+      text-transform: uppercase;
+      text-transform: none;
+    }
 
-      section#contact :-ms-input-placeholder {
-        font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial,
-          sans-serif;
-        text-transform: uppercase;
-        font-weight: 700;
-        color: #eeeeee;
-      }
+    ul.social-buttons {
+      margin-bottom: 0;
+    }
 
-      section#contact .text-danger {
-        color: #e74c3c;
-      }
+    ul.social-buttons li a {
+      display: block;
+      background-color: #222222;
+      height: 40px;
+      width: 40px;
+      border-radius: 100%;
+      font-size: 20px;
+      line-height: 40px;
+      color: white;
+      outline: none;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s;
+    }
 
-      footer {
-        padding: 25px 0;
-        text-align: center;
-      }
+    ul.social-buttons li a:hover,
+    ul.social-buttons li a:focus,
+    ul.social-buttons li a:active {
+      background-color: #fed136;
+    }
 
-      footer span.copyright {
-        line-height: 40px;
-        font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial,
-          sans-serif;
-        text-transform: uppercase;
-        text-transform: none;
-      }
+    .btn:focus,
+    .btn:active,
+    .btn.active,
+    .btn:active:focus {
+      outline: none;
+    }
 
-      footer ul.quicklinks {
-        margin-bottom: 0;
-        line-height: 40px;
-        font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial,
-          sans-serif;
-        text-transform: uppercase;
-        text-transform: none;
-      }
+    .portfolio-modal .modal-dialog {
+      margin: 0;
+      height: 100%;
+      width: auto;
+    }
 
-      ul.social-buttons {
-        margin-bottom: 0;
-      }
+    .portfolio-modal .modal-content {
+      border-radius: 0;
+      background-clip: border-box;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      border: none;
+      min-height: 100%;
+      padding: 100px 0;
+      text-align: center;
+    }
 
-      ul.social-buttons li a {
-        display: block;
-        background-color: #222222;
-        height: 40px;
-        width: 40px;
-        border-radius: 100%;
-        font-size: 20px;
-        line-height: 40px;
-        color: white;
-        outline: none;
-        -webkit-transition: all 0.3s;
-        -moz-transition: all 0.3s;
-        transition: all 0.3s;
-      }
+    .portfolio-modal .modal-content h2 {
+      margin-bottom: 15px;
+      font-size: 3em;
+    }
 
-      ul.social-buttons li a:hover,
-      ul.social-buttons li a:focus,
-      ul.social-buttons li a:active {
-        background-color: #fed136;
-      }
+    .portfolio-modal .modal-content p {
+      margin-bottom: 30px;
+    }
 
-      .btn:focus,
-      .btn:active,
-      .btn.active,
-      .btn:active:focus {
-        outline: none;
-      }
+    .portfolio-modal .modal-content p.item-intro {
+      margin: 20px 0 30px;
+      font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+      font-style: italic;
+      font-size: 16px;
+    }
 
-      .portfolio-modal .modal-dialog {
-        margin: 0;
-        height: 100%;
-        width: auto;
-      }
+    .portfolio-modal .modal-content ul.list-inline {
+      margin-bottom: 30px;
+      margin-top: 0;
+    }
 
-      .portfolio-modal .modal-content {
-        border-radius: 0;
-        background-clip: border-box;
-        -webkit-box-shadow: none;
-        box-shadow: none;
-        border: none;
-        min-height: 100%;
-        padding: 100px 0;
-        text-align: center;
-      }
+    .portfolio-modal .modal-content img {
+      margin-bottom: 30px;
+    }
 
-      .portfolio-modal .modal-content h2 {
-        margin-bottom: 15px;
-        font-size: 3em;
-      }
+    .portfolio-modal .close-modal {
+      position: absolute;
+      width: 75px;
+      height: 75px;
+      background-color: transparent;
+      top: 25px;
+      right: 25px;
+      cursor: pointer;
+    }
 
-      .portfolio-modal .modal-content p {
-        margin-bottom: 30px;
-      }
+    .portfolio-modal .close-modal:hover {
+      opacity: 0.3;
+    }
 
-      .portfolio-modal .modal-content p.item-intro {
-        margin: 20px 0 30px;
-        font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial,
-          sans-serif;
-        font-style: italic;
-        font-size: 16px;
-      }
+    .portfolio-modal .close-modal .lr {
+      height: 75px;
+      width: 1px;
+      margin-left: 35px;
+      background-color: #222222;
+      transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      /* IE 9 */
+      -webkit-transform: rotate(45deg);
+      /* Safari and Chrome */
+      z-index: 1051;
+    }
 
-      .portfolio-modal .modal-content ul.list-inline {
-        margin-bottom: 30px;
-        margin-top: 0;
-      }
+    .portfolio-modal .close-modal .lr .rl {
+      height: 75px;
+      width: 1px;
+      background-color: #222222;
+      transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      /* IE 9 */
+      -webkit-transform: rotate(90deg);
+      /* Safari and Chrome */
+      z-index: 1052;
+    }
 
-      .portfolio-modal .modal-content img {
-        margin-bottom: 30px;
-      }
+    .portfolio-modal .modal-backdrop {
+      opacity: 0;
+      display: none;
+    }
 
-      .portfolio-modal .close-modal {
-        position: absolute;
-        width: 75px;
-        height: 75px;
-        background-color: transparent;
-        top: 25px;
-        right: 25px;
-        cursor: pointer;
-      }
+    ::-moz-selection {
+      text-shadow: none;
+      background: #fed136;
+    }
 
-      .portfolio-modal .close-modal:hover {
-        opacity: 0.3;
-      }
+    ::selection {
+      text-shadow: none;
+      background: #fed136;
+    }
 
-      .portfolio-modal .close-modal .lr {
-        height: 75px;
-        width: 1px;
-        margin-left: 35px;
-        background-color: #222222;
-        transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        /* IE 9 */
-        -webkit-transform: rotate(45deg);
-        /* Safari and Chrome */
-        z-index: 1051;
-      }
+    img::selection {
+      background: transparent;
+    }
 
-      .portfolio-modal .close-modal .lr .rl {
-        height: 75px;
-        width: 1px;
-        background-color: #222222;
-        transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-        /* IE 9 */
-        -webkit-transform: rotate(90deg);
-        /* Safari and Chrome */
-        z-index: 1052;
-      }
+    img::-moz-selection {
+      background: transparent;
+    }
 
-      .portfolio-modal .modal-backdrop {
-        opacity: 0;
-        display: none;
-      }
+    body {
+      webkit-tap-highlight-color: #fed136;
+    }
 
-      ::-moz-selection {
-        text-shadow: none;
-        background: #fed136;
-      }
+    #call-me-baby {
+      position: fixed;
+      bottom: 20px;
+      right: -400px;
+      width: 300px;
+      transition: all ease-in-out 1s;
+    }
+  </style>
 
-      ::selection {
-        text-shadow: none;
-        background: #fed136;
-      }
-
-      img::selection {
-        background: transparent;
-      }
-
-      img::-moz-selection {
-        background: transparent;
-      }
-
-      body {
-        webkit-tap-highlight-color: #fed136;
-      }
-
-      #call-me-baby {
-        position: fixed;
-        bottom: 20px;
-        right: -400px;
-        width: 300px;
-        transition: all ease-in-out 1s;
-      }
-    </style>
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
       <script
         src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"
         integrity="sha384-0s5Pv64cNZJieYFkXYOTId2HMA2Lfb6q2nAcx2n0RTLUnCAoTTsS0nKEO27XyKcY"
@@ -978,585 +943,468 @@
         crossorigin="anonymous"
       ></script>
     <![endif]-->
-  </head>
+</head>
 
-  <body id="page-top" class="index">
-    <img src="images/balloon.svg" id="call-me-baby" />
-    <!-- Navigation -->
-    <nav
-      id="mainNav"
-      class="navbar navbar-default navbar-custom navbar-fixed-top"
-    >
-      <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-          <button
-            type="button"
-            class="navbar-toggle"
-            data-toggle="collapse"
-            data-target="#bs-example-navbar-collapse-1"
-          >
-            <span class="sr-only">Toggle navigation</span> Menu
-            <i class="fa fa-bars"></i>
-          </button>
-          <a class="navbar-brand page-scroll" href="#page-top"
-            >Sereia Software</a
-          >
+<body id="page-top" class="index">
+  <img src="images/balloon.svg" id="call-me-baby" />
+  <!-- Navigation -->
+  <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span> Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <a class="navbar-brand page-scroll" href="#page-top">Sereia Software</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="hidden">
+            <a href="#page-top"></a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#services">Serviços</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#portfolio">Portifólio</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#about">Sobre</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#team">Time</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#contact">Contato</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="intro-text">
+        <div class="intro-lead-in">Desenvolvimento de plataformas web</div>
+        <div class="intro-heading">Com qualidade</div>
+        <a href="#contact" class="page-scroll btn btn-xl">Faça um orçamento</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Services Section -->
+  <section id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">Serviços</h2>
+          <h3 class="section-subheading text-muted">
+            Qualidade e segurança na web
+          </h3>
         </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+            <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">E-Commerce</h4>
+          <p class="text-muted">
+            Anos de experiência na criação de plataformas de ECommerce
+            robustas. Controle completo do inventário de produtos, integração
+            automática com Google Analytcs e adserver incluso.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+            <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Design Impecável</h4>
+          <p class="text-muted">
+            Nosso CEO, Ariel, pessoalmente coordena o desenvolvimento de cada
+            interface com sua capacidade estética superior.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+            <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Segurança</h4>
+          <p class="text-muted">
+            Tecnologia de ponta e um kernel caótico e mal mantido garantem sua
+            segurança em nossos Windows Servers de última geração!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="hidden">
-              <a href="#page-top"></a>
+  <!-- Portfolio Grid Section -->
+  <section id="portfolio" class="bg-light-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">Portfólio</h2>
+          <h3 class="section-subheading text-muted">
+            Alguns de nossos projetos mais ambiciosos!
+          </h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a href="https://www.roverinformatica.com.br/" class="portfolio-link">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fa fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img src="images/rover.webp" width="360" height="261" class="img-responsive" alt="" />
+          </a>
+          <div class="portfolio-caption">
+            <h4>Rover Informática</h4>
+            <p class="text-muted">Design Gráfico</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a href="http://www.jamilin.com/" class="portfolio-link">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fa fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img src="images/jami.webp" width="360" height="261" class="img-responsive" alt="" />
+          </a>
+          <div class="portfolio-caption">
+            <h4>Jamilin</h4>
+            <p class="text-muted">Landing Page</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a href="http://www.arngren.net/" class="portfolio-link">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fa fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img src="images/arngren.webp" width="360" height="261" class="img-responsive" alt="" />
+          </a>
+          <div class="portfolio-caption">
+            <h4>Arngren</h4>
+            <p class="text-muted">Mídia moderna</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">Sobre</h2>
+          <h3 class="section-subheading text-muted">Nossa história.</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <ul class="timeline">
+            <li>
+              <div class="timeline-image">
+                <img class="img-circle img-responsive" width="156" height="156" src="images/banheiro.webp" alt="" />
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4>Fevereiro de 2009</h4>
+                  <h4 class="subheading">Começo humilde</h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">
+                    A idéia para o negócio foi cencebida no banheiro de Ariel,
+                    que inclusive foi o primeiro escritório da empresa pelos
+                    primeiros dois meses de existência.
+                  </p>
+
+                  <p></p>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-image">
+                <img class="img-circle img-responsive" width="156" height="156" src="images/investimento.webp" alt="" />
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4>2009 - 2011</h4>
+                  <h4 class="subheading">Nasce uma empresa</h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">
+                    Com a primeira rodada de investimentos ainda em 2009, a
+                    Rover investimentos solidifica a presença da Sereia
+                    Software no mercado
+                  </p>
+                </div>
+              </div>
             </li>
             <li>
-              <a class="page-scroll" href="#services">Serviços</a>
+              <div class="timeline-image">
+                <img class="img-circle img-responsive" width="156" height="156" src="images/mercado.webp" alt="" />
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4>December 2012</h4>
+                  <h4 class="subheading">
+                    Transição para o mercado internacional
+                  </h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">
+                    Ariel quebra as barreiras do oceano e a empresa atinge
+                    hoje 12 continentes e mais de 3 planetas.
+                  </p>
+                </div>
+              </div>
             </li>
-            <li>
-              <a class="page-scroll" href="#portfolio">Portifólio</a>
-            </li>
-            <li>
-              <a class="page-scroll" href="#about">Sobre</a>
-            </li>
-            <li>
-              <a class="page-scroll" href="#team">Time</a>
-            </li>
-            <li>
-              <a class="page-scroll" href="#contact">Contato</a>
+            <li class="timeline-inverted">
+              <div class="timeline-image">
+                <h4>Faça parte <br />da nossa <br />história!</h4>
+              </div>
             </li>
           </ul>
         </div>
-        <!-- /.navbar-collapse -->
       </div>
-      <!-- /.container-fluid -->
-    </nav>
+    </div>
+  </section>
 
-    <!-- Header -->
-    <header>
-      <div class="container">
-        <div class="intro-text">
-          <div class="intro-lead-in">Desenvolvimento de plataformas web</div>
-          <div class="intro-heading">Com qualidade</div>
-          <a href="#contact" class="page-scroll btn btn-xl"
-            >Faça um orçamento</a
-          >
-        </div>
-      </div>
-    </header>
-
-    <!-- Services Section -->
-    <section id="services">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Serviços</h2>
-            <h3 class="section-subheading text-muted">
-              Qualidade e segurança na web
-            </h3>
-          </div>
-        </div>
-        <div class="row text-center">
-          <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">E-Commerce</h4>
-            <p class="text-muted">
-              Anos de experiência na criação de plataformas de ECommerce
-              robustas. Controle completo do inventário de produtos, integração
-              automática com Google Analytcs e adserver incluso.
-            </p>
-          </div>
-          <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">Design Impecável</h4>
-            <p class="text-muted">
-              Nosso CEO, Ariel, pessoalmente coordena o desenvolvimento de cada
-              interface com sua capacidade estética superior.
-            </p>
-          </div>
-          <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">Segurança</h4>
-            <p class="text-muted">
-              Tecnologia de ponta e um kernel caótico e mal mantido garantem sua
-              segurança em nossos Windows Servers de última geração!
-            </p>
-          </div>
+  <!-- Team Section -->
+  <section id="team" class="bg-light-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">Nosso time incrível!</h2>
+          <h3 class="section-subheading text-muted">
+            Profissionais com uma expertise sem par no mercado sustentam nosso
+            serviço superior.
+          </h3>
         </div>
       </div>
-    </section>
-
-    <!-- Portfolio Grid Section -->
-    <section id="portfolio" class="bg-light-gray">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Portfólio</h2>
-            <h3 class="section-subheading text-muted">
-              Alguns de nossos projetos mais ambiciosos!
-            </h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a
-              href="https://www.roverinformatica.com.br/"
-              class="portfolio-link"
-            >
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img
-                src="images/rover.webp"
-                width="360"
-                height="261"
-                class="img-responsive"
-                alt=""
-              />
-            </a>
-            <div class="portfolio-caption">
-              <h4>Rover Informática</h4>
-              <p class="text-muted">Design Gráfico</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a href="http://www.jamilin.com/" class="portfolio-link">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img
-                src="images/jami.webp"
-                width="360"
-                height="261"
-                class="img-responsive"
-                alt=""
-              />
-            </a>
-            <div class="portfolio-caption">
-              <h4>Jamilin</h4>
-              <p class="text-muted">Landing Page</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a href="http://www.arngren.net/" class="portfolio-link">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img
-                src="images/arngren.webp"
-                width="360"
-                height="261"
-                class="img-responsive"
-                alt=""
-              />
-            </a>
-            <div class="portfolio-caption">
-              <h4>Arngren</h4>
-              <p class="text-muted">Mídia moderna</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Sobre</h2>
-            <h3 class="section-subheading text-muted">Nossa história.</h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <ul class="timeline">
-              <li>
-                <div class="timeline-image">
-                  <img
-                    class="img-circle img-responsive"
-                    width="156"
-                    height="156"
-                    src="images/banheiro.webp"
-                    alt=""
-                  />
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>Fevereiro de 2009</h4>
-                    <h4 class="subheading">Começo humilde</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p class="text-muted">
-                      A idéia para o negócio foi cencebida no banheiro de Ariel,
-                      que inclusive foi o primeiro escritório da empresa pelos
-                      primeiros dois meses de existência.
-                    </p>
-
-                    <p></p>
-                  </div>
-                </div>
-              </li>
-              <li class="timeline-inverted">
-                <div class="timeline-image">
-                  <img
-                    class="img-circle img-responsive"
-                    width="156"
-                    height="156"
-                    src="images/investimento.webp"
-                    alt=""
-                  />
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>2009 - 2011</h4>
-                    <h4 class="subheading">Nasce uma empresa</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p class="text-muted">
-                      Com a primeira rodada de investimentos ainda em 2009, a
-                      Rover investimentos solidifica a presença da Sereia
-                      Software no mercado
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="timeline-image">
-                  <img
-                    class="img-circle img-responsive"
-                    width="156"
-                    height="156"
-                    src="images/mercado.webp"
-                    alt=""
-                  />
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>December 2012</h4>
-                    <h4 class="subheading">
-                      Transição para o mercado internacional
-                    </h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p class="text-muted">
-                      Ariel quebra as barreiras do oceano e a empresa atinge
-                      hoje 12 continentes e mais de 3 planetas.
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li class="timeline-inverted">
-                <div class="timeline-image">
-                  <h4>Faça parte <br />da nossa <br />história!</h4>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Team Section -->
-    <section id="team" class="bg-light-gray">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Nosso time incrível!</h2>
-            <h3 class="section-subheading text-muted">
-              Profissionais com uma expertise sem par no mercado sustentam nosso
-              serviço superior.
-            </h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-4">
-            <div class="team-member">
-              <img
-                src="images/ariel.webp"
-                width="239"
-                height="239"
-                class="img-responsive img-circle"
-                alt=""
-              />
-              <h4>Sereia Morelli</h4>
-              <p class="text-muted">Engenheiro de Frontend</p>
-              <ul class="list-inline social-buttons">
-                <li>
-                  <a href="https://twitter.com/"
-                    ><i class="fa fa-twitter"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="https://www.facebook.com/"
-                    ><i class="fa fa-facebook"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="https://www.linkedin.com/"
-                    ><i class="fa fa-linkedin"></i
-                  ></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="team-member">
-              <img
-                src="images/cajo.webp"
-                width="239"
-                height="239"
-                class="img-responsive img-circle"
-                alt=""
-              />
-              <h4>Cajo Bundchen</h4>
-              <p class="text-muted">Modelo Fotográfico</p>
-              <ul class="list-inline social-buttons">
-                <li>
-                  <a href="https://twitter.com/"
-                    ><i class="fa fa-twitter"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="https://www.facebook.com/"
-                    ><i class="fa fa-facebook"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="https://www.linkedin.com/"
-                    ><i class="fa fa-linkedin"></i
-                  ></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="team-member">
-              <img
-                src="images/pumba.webp"
-                width="239"
-                height="239"
-                class="img-responsive img-circle"
-                alt=""
-              />
-              <h4>Pumba Joy</h4>
-              <p class="text-muted">Enfermeira de Pokemons</p>
-              <ul class="list-inline social-buttons">
-                <li>
-                  <a href="https://twitter.com/"
-                    ><i class="fa fa-twitter"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="https://www.facebook.com/"
-                    ><i class="fa fa-facebook"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="https://www.linkedin.com/"
-                    ><i class="fa fa-linkedin"></i
-                  ></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2 text-center">
-            <p class="large text-muted">
-              Não sei o que escrever aqui, mas precisa de mais texto, então vou
-              contar sobre como fazer Spatzle, mais específicamente sobre como
-              obter o formato legal de um Spatzle bem feito.
-              <br />Eta, já deu o espaço que eu queria. Fica para uma próxima
-              vez.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Entre em contato</h2>
-            <h3 class="section-subheading text-muted">
-              Propostas comerciais, parceirias e contato em geral
-            </h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <form name="sentMessage" id="contactForm" novalidate>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Nome *"
-                      id="name"
-                      required
-                      data-validation-required-message="Entre com o seu nome."
-                    />
-                    <p class="help-block text-danger"></p>
-                  </div>
-                  <div class="form-group">
-                    <input
-                      type="email"
-                      class="form-control"
-                      placeholder="Seu email *"
-                      id="email"
-                      required
-                      data-validation-required-message="Entre com seu endereço de email"
-                    />
-                    <p class="help-block text-danger"></p>
-                  </div>
-                  <div class="form-group">
-                    <input
-                      type="tel"
-                      class="form-control"
-                      placeholder="Telefone *"
-                      id="phone"
-                      required
-                      data-validation-required-message="Seu número de telefone."
-                    />
-                    <p class="help-block text-danger"></p>
-                  </div>
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="ENDEREÇO *"
-                      id="address"
-                      required
-                      data-validation-required-message="Seu endereço completo."
-                    />
-                    <p class="help-block text-danger"></p>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <textarea
-                      class="form-control"
-                      placeholder="Mensagem *"
-                      id="message"
-                      required
-                      data-validation-required-message="Por favor entre uma mensagem."
-                    ></textarea>
-                    <p class="help-block text-danger"></p>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-                <div class="col-lg-12 text-center">
-                  <div id="success"></div>
-                  <button type="submit" class="btn btn-xl">
-                    Enviar Mensagem
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <span class="copyright"
-              >Copyright &copy; Sereia Software Limitd. 2017</span
-            >
-          </div>
-          <div class="col-md-4">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="team-member">
+            <img src="images/ariel.webp" width="239" height="239" class="img-responsive img-circle" alt="" />
+            <h4>Sereia Morelli</h4>
+            <p class="text-muted">Engenheiro de Frontend</p>
             <ul class="list-inline social-buttons">
               <li>
                 <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
               </li>
               <li>
-                <a href="https://www.facebook.com/"
-                  ><i class="fa fa-facebook"></i
-                ></a>
+                <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/"
-                  ><i class="fa fa-linkedin"></i
-                ></a>
+                <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
               </li>
             </ul>
           </div>
-          <div class="col-md-4">
-            <ul class="list-inline quicklinks">
-              <li><a href="#">Política de Privacidade</a></li>
-              <li><a href="#">Termos de Uso</a></li>
+        </div>
+        <div class="col-sm-4">
+          <div class="team-member">
+            <img src="images/cajo.webp" width="239" height="239" class="img-responsive img-circle" alt="" />
+            <h4>Cajo Bundchen</h4>
+            <p class="text-muted">Modelo Fotográfico</p>
+            <ul class="list-inline social-buttons">
+              <li>
+                <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="team-member">
+            <img src="images/pumba.webp" width="239" height="239" class="img-responsive img-circle" alt="" />
+            <h4>Pumba Joy</h4>
+            <p class="text-muted">Enfermeira de Pokemons</p>
+            <ul class="list-inline social-buttons">
+              <li>
+                <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+              </li>
             </ul>
           </div>
         </div>
       </div>
-    </footer>
-    <!-- Eventos -->
-    <script>
-      window.onscroll = () => {
-        if (window.innerHeight + window.scrollY >= document.body.scrollHeight) {
-          console.log("Rolou até o final");
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 text-center">
+          <p class="large text-muted">
+            Não sei o que escrever aqui, mas precisa de mais texto, então vou
+            contar sobre como fazer Spatzle, mais específicamente sobre como
+            obter o formato legal de um Spatzle bem feito.
+            <br />Eta, já deu o espaço que eu queria. Fica para uma próxima
+            vez.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">Entre em contato</h2>
+          <h3 class="section-subheading text-muted">
+            Propostas comerciais, parceirias e contato em geral
+          </h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <form name="sentMessage" id="contactForm" novalidate>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Nome *" id="name" required
+                    data-validation-required-message="Entre com o seu nome." />
+                  <p class="help-block text-danger"></p>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" placeholder="Seu email *" id="email" required
+                    data-validation-required-message="Entre com seu endereço de email" />
+                  <p class="help-block text-danger"></p>
+                </div>
+                <div class="form-group">
+                  <input type="tel" class="form-control" placeholder="Telefone *" id="phone" required
+                    data-validation-required-message="Seu número de telefone." />
+                  <p class="help-block text-danger"></p>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="ENDEREÇO *" id="address" required
+                    data-validation-required-message="Seu endereço completo." />
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <textarea class="form-control" placeholder="Mensagem *" id="message" required
+                    data-validation-required-message="Por favor entre uma mensagem."></textarea>
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+              <div class="col-lg-12 text-center">
+                <div id="success"></div>
+                <button type="submit" class="btn btn-xl">
+                  Enviar Mensagem
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <span class="copyright">Copyright &copy; Sereia Software Limitd. 2017</span>
+        </div>
+        <div class="col-md-4">
+          <ul class="list-inline social-buttons">
+            <li>
+              <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <ul class="list-inline quicklinks">
+            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="#">Termos de Uso</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Eventos -->
+  <script>
+    window.onscroll = () => {
+      if (window.innerHeight + window.scrollY >= document.body.scrollHeight) {
+        console.log("Rolou até o final");
+        return
+      }
+    };
+    //
+    document.querySelector(".page-scroll.btn.btn-xl").addEventListener("click", () => {
+      console.log("Clicou em FAÇA UM ORÇAMENTO");
+    });
+    //
+    let observer = new MutationObserver((e) => {
+      console.log("Visualizou FALE COM UM ATENDENTE");
+    });
+    observer.observe(document.getElementById("call-me-baby"), {
+      attributes: true,
+    });
+    //
+    
+    //
+    document.querySelectorAll('.page-scroll').forEach((element) => {
+      element.addEventListener('click', () => {
+        if (element.className === 'page-scroll') {
+          console.log(`Clicou no menu ${element.innerHTML}`)
+          return
         }
-      };
-      document
-        .querySelector(".page-scroll.btn.btn-xl")
-        .addEventListener("click", () => {
-          console.log("Clicou em FAÇA UM ORÇAMENTO");
-        });
+      })
+    })
+    //
+    let IntersObserver = new IntersectionObserver((e) => {
+      if (e[0].isIntersecting === true) {
+        console.log('Vizualizou o banheiro')
+        return
+      }
+    })
+    IntersObserver.observe(document.querySelector('.img-circle.img-responsive'))
 
-      let observer = new MutationObserver((e) => {
-        console.log("Visualizou FALE COM UM ATENDENTE");
-      });
-      observer.observe(document.getElementById("call-me-baby"), {
-        attributes: true,
-      });
+  </script>
+  <!-- jQuery -->
+  <script src="assets/jquery-3.2.1.min.js"></script>
 
-      document.querySelectorAll(".form-control").forEach((element) => {
-        element.addEventListener("input", (e) => {
-          if (element.id === "email") {
-            var validd = element.getAttribute("aria-invalid");
-            if (validd == "false" && e.target.value.length > 3) {
-              console.log("Preencheu o campo email");
-              return
-            }
-            return;
-          }
-          if (e.target.value.length > 0)
-            console.log(`Preencheu o campo ${element.getAttribute("id")}`);
-        });
-      });
-    </script>
-    <!-- jQuery -->
-    <script src="assets/jquery-3.2.1.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script src="assets/bootstrap.min.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="assets/bootstrap.min.js"></script>
+  <!-- Plugin JavaScript -->
+  <script src="assets/jquery.easing.min.js" crossorigin="anonymous"></script>
+  <!--integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" -->
 
-    <!-- Plugin JavaScript -->
-    <script src="assets/jquery.easing.min.js" crossorigin="anonymous"></script>
-    <!--integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" -->
-
-    <script>
+  <script>
       (function ($) {
         var createdElements = [];
 
@@ -1907,10 +1755,10 @@
                   message = message
                     ? message
                     : "'" +
-                      el +
-                      "' validation failed <!-- Add attribute 'data-validation-" +
-                      el.toLowerCase() +
-                      "-message' to input to change this message -->";
+                    el +
+                    "' validation failed <!-- Add attribute 'data-validation-" +
+                    el.toLowerCase() +
+                    "-message' to input to change this message -->";
 
                   $.each(
                     settings.validatorTypes,
@@ -1922,8 +1770,8 @@
                         !foundValidator &&
                         $this.data(
                           "validation" +
-                            el +
-                            formatValidatorName(validatorTemplate.name)
+                          el +
+                          formatValidatorName(validatorTemplate.name)
                         ) !== undefined
                       ) {
                         validators[validatorType].push(
@@ -1967,12 +1815,12 @@
                           if (
                             !foundValidator &&
                             validatorType ===
-                              validatorTemplateType.toLowerCase()
+                            validatorTemplateType.toLowerCase()
                           ) {
                             $this.data(
                               "validation" +
-                                el +
-                                formatValidatorName(validatorTemplate.name),
+                              el +
+                              formatValidatorName(validatorTemplate.name),
                               validator[validatorTemplate.name.toLowerCase()]
                             );
                             validators[validatorType].push(
@@ -2135,19 +1983,19 @@
                         // Only one? Being strict? Just output it.
                         $helpBlock.html(
                           errorsFound[0] +
-                            (settings.options.prependExistingHelpBlock
-                              ? $helpBlock.data("original-contents")
-                              : "")
+                          (settings.options.prependExistingHelpBlock
+                            ? $helpBlock.data("original-contents")
+                            : "")
                         );
                       } else {
                         // Multiple? Being sloppy? Glue them together into an UL.
                         $helpBlock.html(
                           '<ul role="alert"><li>' +
-                            errorsFound.join("</li><li>") +
-                            "</li></ul>" +
-                            (settings.options.prependExistingHelpBlock
-                              ? $helpBlock.data("original-contents")
-                              : "")
+                          errorsFound.join("</li><li>") +
+                          "</li></ul>" +
+                          (settings.options.prependExistingHelpBlock
+                            ? $helpBlock.data("original-contents")
+                            : "")
                         );
                       }
                     } else {
@@ -2223,8 +2071,8 @@
                 errorMessages = errorMessages.concat(
                   $(el).triggerHandler("getValidators.validation")
                     ? $(el).triggerHandler("validation.validation", {
-                        submitting: true,
-                      })
+                      submitting: true,
+                    })
                     : []
                 );
               });
@@ -2273,8 +2121,8 @@
                         rrjqbvValidator.lastFinished = true;
                         rrjqbvThis.data(
                           "validation" +
-                            rrjqbvValidator.validatorName +
-                            "Message",
+                          rrjqbvValidator.validatorName +
+                          "Message",
                           rrjqbvValidator.message
                         );
                         // Timeout is set to avoid problems with the events being considered 'already fired'
@@ -2656,8 +2504,8 @@
           } else {
             $.error(
               "Method " +
-                method +
-                " does not exist on jQuery.jqBootstrapValidation"
+              method +
+              " does not exist on jQuery.jqBootstrapValidation"
             );
             return null;
           }
@@ -2669,139 +2517,140 @@
             .jqBootstrapValidation.apply(this, arguments);
         };
       })(jQuery);
-      $(function () {
-        let shouldFail = false;
-        $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
-          preventSubmit: true,
-          submitError: function ($form, event, errors) {
-            // additional error messages or events
-          },
-          submitSuccess: function ($form, event) {
-            event.preventDefault(); // prevent default submit behaviour
-            // get values from FORM
-            var name = $("input#name").val();
-            var email = $("input#email").val();
-            var phone = $("input#phone").val();
-            var address = $("input#address").val();
-            var message = $("textarea#message").val();
-            var firstName = name; // For Success/Failure Message
-            // Check for white space in name for Success/Fail message
-            if (firstName.indexOf(" ") >= 0) {
-              firstName = name.split(" ").slice(0, -1).join(" ");
-            }
-            $.ajax({
-              url: (shouldFail = !shouldFail) // alterna entre falha e sucesso da submissão do contato
-                ? "https://run.mocky.io/v3/9f2a669c-e0d8-463c-bcb1-ada3004d94e6" // sucesso na submissão
-                : "https://run.mocky.io/v3/723e9027-4fe2-4697-8198-902e2123d854", // falha na submissão
-              type: "POST",
-              data: {
-                name,
-                phone,
-                email,
-                address,
-                message,
-              },
-              cache: false,
-              success: function () {
-                // Success message
-                $("#success").html("<div class='alert alert-success'>");
-                $("#success > .alert-success")
-                  .html(
-                    "<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;"
-                  )
-                  .append("</button>");
-                $("#success > .alert-success").append(
-                  "<strong>Your message has been sent. </strong>"
-                );
-                $("#success > .alert-success").append("</div>");
+    $(function () {
+      let shouldFail = false;
+      $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
+        preventSubmit: true,
+        submitError: function ($form, event, errors) {
+          // additional error messages or events
+        },
+        submitSuccess: function ($form, event) {
+          event.preventDefault(); // prevent default submit behaviour
+          // get values from FORM
+          var name = $("input#name").val();
+          var email = $("input#email").val();
+          var phone = $("input#phone").val();
+          var address = $("input#address").val();
+          var message = $("textarea#message").val();
+          var firstName = name; // For Success/Failure Message
+          // Check for white space in name for Success/Fail message
+          if (firstName.indexOf(" ") >= 0) {
+            firstName = name.split(" ").slice(0, -1).join(" ");
+          }
+          $.ajax({
+            url: (shouldFail = !shouldFail) // alterna entre falha e sucesso da submissão do contato
+              ? "https://run.mocky.io/v3/9f2a669c-e0d8-463c-bcb1-ada3004d94e6" // sucesso na submissão
+              : "https://run.mocky.io/v3/723e9027-4fe2-4697-8198-902e2123d854", // falha na submissão
+            type: "POST",
+            data: {
+              name,
+              phone,
+              email,
+              address,
+              message,
+            },
+            cache: false,
+            success: function () {
+              // Success message
+              $("#success").html("<div class='alert alert-success'>");
+              $("#success > .alert-success")
+                .html(
+                  "<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;"
+                )
+                .append("</button>");
+              $("#success > .alert-success").append(
+                "<strong>Your message has been sent. </strong>"
+              );
+              $("#success > .alert-success").append("</div>");
 
-                //clear all fields
-                $("#contactForm").trigger("reset");
-              },
-              error: function () {
-                // Fail message
-                $("#success").html("<div class='alert alert-danger'>");
-                $("#success > .alert-danger")
-                  .html(
-                    "<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;"
-                  )
-                  .append("</button>");
-                $("#success > .alert-danger").append(
-                  $("<strong>").text(
-                    "Sorry " +
-                      firstName +
-                      ", it seems that my mail server is not responding. Please try again later!"
-                  )
-                );
-                $("#success > .alert-danger").append("</div>");
-                //clear all fields
-                $("#contactForm").trigger("reset");
-              },
-            });
-          },
-          filter: function () {
-            return $(this).is(":visible");
-          },
-        });
-
-        $('a[data-toggle="tab"]').click(function (e) {
-          e.preventDefault();
-          $(this).tab("show");
-        });
+              //clear all fields
+              $("#contactForm").trigger("reset");
+            },
+            error: function () {
+              // Fail message
+              $("#success").html("<div class='alert alert-danger'>");
+              $("#success > .alert-danger")
+                .html(
+                  "<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;"
+                )
+                .append("</button>");
+              $("#success > .alert-danger").append(
+                $("<strong>").text(
+                  "Sorry " +
+                  firstName +
+                  ", it seems that my mail server is not responding. Please try again later!"
+                )
+              );
+              $("#success > .alert-danger").append("</div>");
+              //clear all fields
+              $("#contactForm").trigger("reset");
+            },
+          });
+        },
+        filter: function () {
+          return $(this).is(":visible");
+        },
       });
 
-      /*When clicking on Full hide fail/success boxes */
-      $("#name").focus(function () {
-        $("#success").html("");
+      $('a[data-toggle="tab"]').click(function (e) {
+        e.preventDefault();
+        $(this).tab("show");
+      });
+    });
+
+    /*When clicking on Full hide fail/success boxes */
+    $("#name").focus(function () {
+      $("#success").html("");
+    });
+
+    (function ($) {
+      "use strict"; // Start of use strict
+
+      // jQuery for page scrolling feature - requires jQuery Easing plugin
+      $("a.page-scroll").bind("click", function (event) {
+        var $anchor = $(this);
+        $("html, body")
+          .stop()
+          .animate(
+            {
+              scrollTop: $($anchor.attr("href")).offset().top - 50,
+            },
+            1250,
+            "easeInOutExpo"
+          );
+        event.preventDefault();
       });
 
-      (function ($) {
-        "use strict"; // Start of use strict
+      // Highlight the top nav as scrolling occurs
+      $("body").scrollspy({
+        target: ".navbar-fixed-top",
+        offset: 51,
+      });
 
-        // jQuery for page scrolling feature - requires jQuery Easing plugin
-        $("a.page-scroll").bind("click", function (event) {
-          var $anchor = $(this);
-          $("html, body")
-            .stop()
-            .animate(
-              {
-                scrollTop: $($anchor.attr("href")).offset().top - 50,
-              },
-              1250,
-              "easeInOutExpo"
-            );
-          event.preventDefault();
-        });
+      // Closes the Responsive Menu on Menu Item Click
+      $(".navbar-collapse ul li a").click(function () {
+        $(".navbar-toggle:visible").click();
+      });
 
-        // Highlight the top nav as scrolling occurs
-        $("body").scrollspy({
-          target: ".navbar-fixed-top",
-          offset: 51,
-        });
+      // Offset for Main Navigation
+      $("#mainNav").affix({
+        offset: {
+          top: 100,
+        },
+      });
+    })(jQuery); // End of use strict
 
-        // Closes the Responsive Menu on Menu Item Click
-        $(".navbar-collapse ul li a").click(function () {
-          $(".navbar-toggle:visible").click();
-        });
+    window.setTimeout(function () {
+      var element = document.getElementById("call-me-baby");
+      element.style.right = "20px";
 
-        // Offset for Main Navigation
-        $("#mainNav").affix({
-          offset: {
-            top: 100,
-          },
-        });
-      })(jQuery); // End of use strict
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "popup aleatório apareceu",
+        apareceuem: new Date().getTime(),
+      });
+    }, 5000);
+  </script>
+</body>
 
-      window.setTimeout(function () {
-        var element = document.getElementById("call-me-baby");
-        element.style.right = "20px";
-
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-          event: "popup aleatório apareceu",
-          apareceuem: new Date().getTime(),
-        });
-      }, 5000);
-    </script>
-  </body>
 </html>
