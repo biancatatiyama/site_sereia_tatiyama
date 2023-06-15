@@ -1375,23 +1375,31 @@
       attributes: true,
     });
     // 4
+    var inputFulfillment = { name: '', email: '', phone: '', address: '', message: '' }
     Array.from(document.getElementById('contactForm').querySelectorAll('.form-control')).forEach((element) => {
       element.addEventListener('change', (e) => {
-        if (element.id === 'email' && element.getAttribute('aria-invalid') === 'false') {
+        if (element.id === 'email' && element.checkValidity()) {
           console.log('Preencheu o campo email')
+          inputFulfillment[element.id] = true
           return
-        }
-        if (element.id !== 'email' && e.target.value !== '') console.log(`Preencheu campo ${element.id}`)
+        } else inputFulfillment[element.id] = false
+        if (element.id !== 'email' && e.target.value !== '') {
+          console.log(`Preencheu campo ${element.id}`)
+          inputFulfillment[element.id] = true
+        } else inputFulfillment[element.id] = false
+        checkForm()
       })
     })
     // 5
-
+    const checkForm = () => {
+      var isInputFilled = Object.values(inputFulfillment).every(element => element === true)
+      if (isInputFilled) console.log('Preencheu todo o formulário')
+    }
     // 6
     document.querySelectorAll('.page-scroll').forEach((element) => {
       element.addEventListener('click', () => {
         if (element.className === 'page-scroll' || element.className === 'navbar-brand page-scroll') {
-          console.log(`Clicou no menu ${element.innerHTML}`)
-          return
+          return console.log(`Clicou no menu ${element.innerHTML}`)
         }
       })
     })
