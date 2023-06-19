@@ -1359,34 +1359,41 @@
     // 1
     window.onscroll = () => {
       if (window.innerHeight + window.scrollY >= document.body.scrollHeight) {
-        console.log("Rolou até o final");
-        return
+        return console.log("Rolou até o final");
       }
     };
     // 2
     document.querySelector(".page-scroll.btn.btn-xl").addEventListener("click", () => {
-      console.log("Clicou em FAÇA UM ORÇAMENTO");
+      console.log("Clicou em faça um orçamento");
     });
     // 3
     var phoneObserver = new MutationObserver((e) => {
-      console.log("Visualizou FALE COM UM ATENDENTE");
+      console.log("Visualizou fale com um atendente");
     });
     phoneObserver.observe(document.getElementById("call-me-baby"), {
       attributes: true,
     });
     // 4
-    var inputFulfillment = { name: '', email: '', phone: '', address: '', message: '' }
-    Array.from(document.getElementById('contactForm').querySelectorAll('.form-control')).forEach((element) => {
+    var inputFulfillment = {
+      name: '',
+      email: '',
+      phone: '',
+      address: '',
+      message: ''
+    }
+    Array.from(document.querySelectorAll('#contactForm .form-control')).forEach((element) => {
       element.addEventListener('change', (e) => {
-        if (element.id === 'email' && element.checkValidity()) {
+        if (element.id === 'email' && element.getAttribute('aria-invalid') == 'false') {
           console.log('Preencheu o campo email')
           inputFulfillment[element.id] = true
+          checkForm()
           return
-        } else inputFulfillment[element.id] = false
-        if (element.id !== 'email' && e.target.value !== '') {
+        } else { inputFulfillment[element.id] = false }
+
+        if (element.id !== 'email' && e.target.value.trim() !== '') {
           console.log(`Preencheu campo ${element.id}`)
           inputFulfillment[element.id] = true
-        } else inputFulfillment[element.id] = false
+        } else inputFulfillment[element.id] = false;
         checkForm()
       })
     })
