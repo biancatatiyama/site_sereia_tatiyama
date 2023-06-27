@@ -1388,7 +1388,7 @@
           inputFulfillment[element.id] = true
           checkForm()
           return
-        } else { inputFulfillment[element.id] = false }
+        } else inputFulfillment[element.id] = false
 
         if (element.id !== 'email' && e.target.value.trim() !== '') {
           console.log(`Preencheu campo ${element.id}`)
