@@ -1396,20 +1396,17 @@
       })
     })
     // 4] Quantos enviaram o formulário de contato? Foi com sucesso ou falha?
-    var isInputInvalid = false
-    document.querySelector('button[type=submit]').addEventListener('click', () => {
-      gtag('event', 'form_submit', {
-        'submit_successful': isInputInvalid
-      })
-      var successObserver = new MutationObserver((e) => {
-        console.log("submit sucedido");
-        isInputInvalid = true
-      });
-      successObserver.observe(document.getElementById("success"), {
-        childList: true,
-      });
-      isInputInvalid = false
-    })
+    var successObserver = new MutationObserver((e) => {
+      if (document.getElementById('success').hasChildNodes()) {
+        console.log(e[0].addedNodes[0].className)
+        gtag('event', 'form_submit', {
+          'form_successful': e[0].addedNodes[0].className === 'alert alert-success' ? true : false
+        })
+      }
+    });
+    successObserver.observe(document.getElementById("success"), {
+      childList: true,
+    });
     // 5] Quantas pessoas interagiram com o menu superior?
     document.querySelectorAll('.page-scroll').forEach((element) => {
       element.addEventListener('click', () => {
@@ -1421,21 +1418,19 @@
       })
     })
     // 6] Quantas pessoas clicaram nos links de mídias sociais? E qual foi a mídia? Foi do próprio site ou a de um dev?
-    Array.from(document.querySelectorAll('.team-member')).forEach(element => {
-
-    })
-    Array.from(document.querySelectorAll('.list-inline.social-buttons li a')).forEach(element => {
+    document.querySelectorAll('.social-buttons a').forEach(element => {
       element.addEventListener('click', () => {
-        console.log(element)
-        gtag('event', 'clicked_social_media', {
-          'clicked_url': element.getAttribute('href')
+        gtag('event', 'clicked_media', {
+          'media_url': element.href,
+          'media_choice': element.closest('div').className === 'team-member' ? 'dev' : 'site'
         })
-      })
-    })
+      });
+    });
     // 7] Quantos ficaram pelo menos 1 minuto no seu site?
     setTimeout(() => {
       gtag('event', 'stayed_one_minute', {})
     }, 60000)
+
     // 8] O pop-up com o telefone apareceu na página? Note que ele aparecer na página não configura uma não-rejeição do usuário.
     var phoneObserver = new IntersectionObserver((e) => {
       if (e[0].isIntersecting === true) gtag('event', 'phone_popup', {})
