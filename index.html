@@ -1365,40 +1365,45 @@
   <!-- Eventos Bianca Tatiyama-->
   <script>
     // 1] Quantos rolaram a página até o final?
-    window.onscroll = () => {
+    var handleScrollEnd = () => {
       if (window.innerHeight + window.scrollY >= document.body.scrollHeight) {
-        return gtag('event', 'scrolled_to_end', {
+        gtag('event', 'scrolled_to_end', {
           'percent_scrolled': 100
         });
+        window.removeEventListener('scroll', handleScrollEnd, false)
       }
-    };
+    }
+    window.addEventListener('scroll', handleScrollEnd, false)
     // 2] Quantos visualizaram o formulário de contato?
     var contactObserver = new IntersectionObserver((e) => {
-      if (e[0].isIntersecting === true) gtag('event', 'viewed_form', {})
+      if (e[0].isIntersecting) {
+        gtag('event', 'viewed_form', {})
+        contactObserver.disconnect()
+        return
+      }
     })
     contactObserver.observe(document.getElementById('contactForm'))
     // 3] Quantos começaram a preencher o formulário de contato e por qual input do formulário?
     var formInputs = Array.from(document.querySelectorAll('#contactForm .form-control'))
     var isFormEngaged = false
+
     const handleFormEngagement = (e) => {
       if (!isFormEngaged) {
         isFormEngaged = !isFormEngaged
         gtag('event', 'form_engagement', {
           'first_engagement': e.target.id
         })
-        return
       }
+      e.target.closest('.row').querySelectorAll('input').forEach(element => {
+        element.removeEventListener('change', handleFormEngagement, false)
+      })
     }
     formInputs.forEach(input => {
       input.addEventListener('change', handleFormEngagement, false)
-      input.addEventListener('change', () => {
-        input.removeEventListener('change', handleFormEngagement, false)
-      })
     })
     // 4] Quantos enviaram o formulário de contato? Foi com sucesso ou falha?
     var successObserver = new MutationObserver((e) => {
       if (document.getElementById('success').hasChildNodes()) {
-        console.log(e[0].addedNodes[0].className)
         gtag('event', 'form_submit', {
           'form_successful': e[0].addedNodes[0].className === 'alert alert-success' ? true : false
         })
