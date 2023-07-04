@@ -1363,7 +1363,7 @@
     </div>
   </footer>
   <!-- Eventos Bianca Tatiyama-->
-  <script>
+<!--   <script>
     // 1] Quantos rolaram a página até o final?
     var handleScrollEnd = () => {
       if (window.innerHeight + window.scrollY >= document.body.scrollHeight) {
@@ -1422,7 +1422,8 @@
         }
       })
     })
-    // 6] Quantas pessoas clicaram nos links de mídias sociais? E qual foi a mídia? Foi do próprio site ou a de um dev?
+    // 6] Quantas pessoas clicaram nos links de mídias sociais? E qual foi a mídia? 
+    // Foi do próprio site ou a de um dev?
     document.querySelectorAll('.social-buttons a').forEach(element => {
       element.addEventListener('click', () => {
         gtag('event', 'clicked_media', {
@@ -1432,17 +1433,17 @@
       });
     });
     // 7] Quantos ficaram pelo menos 1 minuto no seu site?
+
     setTimeout(() => {
       gtag('event', 'stayed_one_minute', {})
     }, 60000)
-
-    // 8] O pop-up com o telefone apareceu na página? Note que ele aparecer na página não configura uma não-rejeição do usuário.
+    // 8] O pop-up com o telefone apareceu na página? Note que ele 
+    // aparecer na página não configura uma não-rejeição do usuário.
     var phoneObserver = new IntersectionObserver((e) => {
       if (e[0].isIntersecting === true) gtag('event', 'phone_popup', {})
     })
     phoneObserver.observe(document.getElementById('call-me-baby'))
-
-  </script>
+  </script> -->
   <!-- jQuery -->
   <script src="assets/jquery-3.2.1.min.js"></script>
 
